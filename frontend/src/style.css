@@ -1,0 +1,70 @@
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: solid;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+a {
+  color: rgb(212, 195, 195);
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.btn {
+  flex: 1 1 auto;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+ }
+
+ .top-right {
+  position: absolute;
+  top: 24px;
+  left: 70px;
+  color: white;
+}
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6659d 0%, #fda085 51%, #f6d365 100%);
+}
+.btn-2 {
+  background-image: linear-gradient(to right, #225ac2 0%, #83a2f7 51%, #83a2f7 100%);
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
