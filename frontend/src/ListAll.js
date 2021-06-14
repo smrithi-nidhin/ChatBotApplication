@@ -15,12 +15,7 @@ class ListAll extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-
-        <div className="row">
-          <div className="col-12">
-            <div className="row" style={{ paddingLeft: '50px' }}>
-              <div className="col-12">
+      <div className="container">          
                 <h1>Chat List</h1>
                 {
                   this.state.chats.map(chat => <div id="ch_id">
@@ -44,13 +39,6 @@ class ListAll extends React.Component {
                   </div>
                 )}
               </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     );
   }
 }
