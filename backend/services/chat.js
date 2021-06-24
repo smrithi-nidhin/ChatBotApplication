@@ -1,7 +1,6 @@
-const { Chat } = require('../models/chats');
+const { chat_records } = require('../models/chat_records');
 function getAllChats() {
-    return Chat.find({})
-
+    return chat_records.find({})
         .then(chats => {
             return {
                 statusCode: 200,
@@ -13,3 +12,4 @@ function getAllChats() {
 module.exports = {
     getAllChats: getAllChats,
 }
+// ( { item: { $not: /^p.*/ } } )

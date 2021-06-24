@@ -10,7 +10,7 @@ var chatsRouter = require('./routes/users');
 const cors = require('cors');
 const mongoose = require('mongoose');
 var app = express();
-mongoose.connect('mongodb://localhost:27017/chat_db');
+mongoose.connect('mongodb+srv://FNOL:IVbB1A8Ogako4wm6@edh-cluster.lyazm.mongodb.net/FNOL-DB?retryWrites=true&w=majority');
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true

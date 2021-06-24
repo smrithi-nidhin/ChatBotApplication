@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">      
+        <div className="App" style={{backgroundColor:"#eee"}}>      
           <Switch>          
             <Route path="/" exact={true} >
               <ListAll />

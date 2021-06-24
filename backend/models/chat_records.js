@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
-const Chat = mongoose.model('Chat', {
+const chat_records = mongoose.model('chat_records', {
     response_id: String,
     user_intent: String,
     user: String,
-    Bot: String,
-    Date:String
-
+    bot: String,
+    date:String,
 });
 module.exports = {
-    Chat
+    
+    chat_records
 }

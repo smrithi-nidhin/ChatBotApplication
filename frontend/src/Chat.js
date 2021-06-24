@@ -4,7 +4,6 @@ class Chat {
     static getAllChats() {    
         return axios.post(baseUrl + "/chats/getAllChats", { withCredentials: true })
     }
-
 }
 
 export default Chat;

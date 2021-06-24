@@ -1,41 +1,30 @@
-
-table {
+/* 
+ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
  border: none;
 }
-#ch_id{
-  width: 60%;
-  border:solid 5px red;
+
+ td{
  
-  margin-left: 20%;
-  padding: 5%;
-  padding-left: 0%;
-}
-td{
-  border: solid black;
   text-align: left;
   padding: 8px;
-}
-.ch_id1{
-  padding-right: 200px;
-}
+}  */
 
-a{
-  background-color:#008CBA ;
-  color: white;
-  display: inline-block;
-  height:30px;
-  width:200px;
- 
+div{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+ border: none;
 }
-a:hover {
-  background:#008CBA ;
-  color: white;
+h1{
+  margin-right: 700px;
 }
-input{
-  margin-left: 30px;
+#user1{
+  color: #02c2ae;
 }
-
-
- 
+#bot1{
+  color: #026fc2;
+}
+ b{
+   padding-right: 100px;
+ }

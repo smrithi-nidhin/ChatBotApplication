@@ -9,36 +9,38 @@ class ListAll extends React.Component {
     Chat.getAllChats()
       .then(data => {
         this.setState({
-          chats: data.data.chats
+          chats: data.data.chats,
+
         });
       });
   }
   render() {
     return (
-      <div className="container">          
-                <h1>Chat List</h1>
-                {
-                  this.state.chats.map(chat => <div id="ch_id">
-                    <div className="ch_id1">
-                      <label>Response Id  <input type="text" value={chat.response_id} /> </label>
-                    </div><br></br>
-                    <div className="ch_id1">
-                      <label>User intent  <input type="text" value={chat.user_intent} /> </label>
-                    </div><br></br>
-                    <div className="ch_id1">
-                      <label>User  <input type="text" value={chat.user} style={{ marginLeft: "80px" }} /> </label>
-                    </div><br></br>
-                    <div className="ch_id1">
-                      <label>Bot  <input type="text" value={chat.Bot} style={{ marginLeft: "80px" }} /> </label>
-                    </div><br></br>
-                    <div className="ch_id1">
-                      <label>Date  <input type="text" value={chat.Date} style={{ marginLeft: "80px" }} /> </label>
-                    </div>
-                  <br></br>
-                     <a href="/" >Refresh</a>
-                  </div>
-                )}
-              </div>
+      <div className="container" >
+        <h1>Call Transcript</h1>
+        <div className="jumbotron" >
+          {
+            this.state.chats.map(chat => <div >
+              <div className="row">
+                <div className="col-sm-2" style={{ paddingLeft: "50px" }}>
+                  <b id="user1">User</b>
+                </div>
+                <div className="col-sm-10" style={{ textAlign: "left" }}>
+                  <div>{chat.user}</div>
+                </div>
+              </div><br></br>
+              <div className="row">
+                <div className="col-sm-2" style={{ paddingLeft: "50px" }}>
+                  <b id="bot1">Casie</b>
+                </div>
+                <div className="col-sm-10" style={{ textAlign: "left" }}>
+                  <div >{chat.bot.replace(/(<([^>]+)>)/ig, '')}</div>
+                </div>
+              </div><br></br>
+            </div>
+            )}
+        </div>
+      </div>
     );
   }
 }
